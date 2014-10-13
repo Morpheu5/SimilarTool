@@ -64,10 +64,12 @@
 		6B04052C84A54727956C4F26 /* OscBundle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = OscBundle.cpp; path = ../../cinder_0.8.6_mac/blocks/OSC/src/OscBundle.cpp; sourceTree = "<group>"; };
 		722729B2F5324EFAB0BDD33C /* TuioClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = TuioClient.cpp; path = ../../cinder_0.8.6_mac/blocks/TUIO/src/TuioClient.cpp; sourceTree = "<group>"; };
 		7E0379F9633446C69C01FF1C /* OscMessage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = OscMessage.cpp; path = ../../cinder_0.8.6_mac/blocks/OSC/src/OscMessage.cpp; sourceTree = "<group>"; };
-		7F3B51198B624CEE890E948F /* SimilarToolApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = SimilarToolApp.cpp; path = ../src/SimilarToolApp.cpp; sourceTree = "<group>"; };
+		7F3B51198B624CEE890E948F /* SimilarToolApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SimilarToolApp.cpp; path = ../src/SimilarToolApp.cpp; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* SimilarTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimilarTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9646D3071B1744009C6B26E9 /* IpEndpointName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IpEndpointName.h; path = ../../cinder_0.8.6_mac/blocks/OSC/src/ip/IpEndpointName.h; sourceTree = "<group>"; };
 		99BF13A11DD0423A8EB3B705 /* OscReceivedElements.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = OscReceivedElements.cpp; path = ../../cinder_0.8.6_mac/blocks/OSC/src/osc/OscReceivedElements.cpp; sourceTree = "<group>"; };
+		A32DB9CC19E6CE6F00F25454 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Model.h; path = ../include/Model.h; sourceTree = "<group>"; };
+		A32DB9CD19E6D8FA00F25454 /* Logger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = ../include/Logger.h; sourceTree = "<group>"; };
 		A32F18B119E54FFE009AD37F /* SimilarToolApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SimilarToolApp.h; path = ../include/SimilarToolApp.h; sourceTree = "<group>"; };
 		A32F18B219E55A5E009AD37F /* Trace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Trace.h; path = ../include/Trace.h; sourceTree = "<group>"; };
 		A32F18B319E55BBF009AD37F /* Trace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Trace.cpp; path = ../src/Trace.cpp; sourceTree = "<group>"; };
@@ -200,12 +202,14 @@
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				A32DB9CD19E6D8FA00F25454 /* Logger.h */,
 				22A41E30D62843CD9C12167E /* Resources.h */,
 				BB78B7D471704E898C1D08DC /* SimilarTool_Prefix.pch */,
 				A32F18B119E54FFE009AD37F /* SimilarToolApp.h */,
 				A32F18B219E55A5E009AD37F /* Trace.h */,
 				A32F18B519E58537009AD37F /* PlayerWidget.h */,
 				A32F18B819E585B8009AD37F /* Widget.h */,
+				A32DB9CC19E6CE6F00F25454 /* Model.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -394,6 +398,7 @@
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
@@ -419,6 +424,7 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

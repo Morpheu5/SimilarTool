@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<triplet params="A, B, C">
+		<item type="0">drums.mp3</item>
+		<item type="1">guitar.mp3</item>
+		<item type="2">jdee_beat.mp3</item>
+	</triplet>
+	<triplet params="D, E, F">
+		<item type="0">drums.mp3</item>
+		<item type="1">guitar.mp3</item>
+		<item type="2">jdee_beat.mp3</item>
+	</triplet>
+</root>

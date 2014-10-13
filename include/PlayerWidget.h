@@ -14,8 +14,11 @@ class PlayerWidget : public Widget {
 	ci::audio::GainNodeRef _gainNode;
 	
 public:
+	unsigned long type;
+	std::string filename;
+	
 	PlayerWidget();
-	PlayerWidget(std::string filename);
+	PlayerWidget(std::string f);
 	virtual ~PlayerWidget();
 	
 	void draw();

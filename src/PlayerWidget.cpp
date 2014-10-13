@@ -4,15 +4,21 @@
 #include "cinder/audio/NodeEffects.h"
 #include "cinder/audio/SamplePlayerNode.h"
 
+#include "Logger.h"
+
 using namespace ci;
 using namespace std;
 
 PlayerWidget::PlayerWidget() : Widget() {
 	_isPlaying = false;
 	_width = 75.0;
+	type = -1;
+	filename = "";
 }
 
-PlayerWidget::PlayerWidget(string filename) : PlayerWidget() {
+PlayerWidget::PlayerWidget(string f) : PlayerWidget() {
+	filename = f;
+	
 	auto context = audio::Context::master();
 #if DEBUG==1
 	auto filepath = ci::fs::path("/Users/morpheu5/src/SimilarTool");
@@ -57,8 +63,10 @@ void PlayerWidget::draw() {
 
 void PlayerWidget::tap(Vec2f p) {
 	if(_playerNode->isEnabled()) {
+		Logger::instance().log(stringstream() << "PlayerWidget -- Tap -- Stop -- type: " << type << "; filename: " << filename);
 		_playerNode->stop();
 	} else {
+		Logger::instance().log(stringstream() << "PlayerWidget -- Tap -- Play -- type: " << type << "; filename: " << filename);
 		_playerNode->start();
 	}
 }
