@@ -229,7 +229,7 @@ void SimilarToolApp::processTraces() {
 				} else if(trace->state == Trace::State::TOUCH_UP && trace->widgetId > 0) {
 					_widgetsMutex.lock();
 					if(dynamic_pointer_cast<PlayerWidget>(_widgets[trace->widgetId])) {
-						Logger::instance().log(stringstream() << "PlayerWidget " << trace->widgetId << " moved -- from: " << trace->points.front() << " -- to: " << trace->points.back());
+						Logger::instance().log(stringstream() << "PlayerWidget " << trace->widgetId << " -- Move -- from: " << trace->points.front() << " -- to: " << trace->points.back());
 					}
 					_widgetsMutex.unlock();
 				}

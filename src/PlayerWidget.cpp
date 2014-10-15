@@ -63,10 +63,10 @@ void PlayerWidget::draw() {
 
 void PlayerWidget::tap(Vec2f p) {
 	if(_playerNode->isEnabled()) {
-		Logger::instance().log(stringstream() << "PlayerWidget -- Tap -- Stop -- type: " << type << "; filename: " << filename);
+		Logger::instance().log(stringstream() << "PlayerWidget " << id << " -- Tap -- Stop -- type: " << type << "; filename: " << filename);
 		_playerNode->stop();
 	} else {
-		Logger::instance().log(stringstream() << "PlayerWidget -- Tap -- Play -- type: " << type << "; filename: " << filename);
+		Logger::instance().log(stringstream() << "PlayerWidget " << id << " -- Tap -- Play -- type: " << type << "; filename: " << filename);
 		_playerNode->start();
 	}
 }
