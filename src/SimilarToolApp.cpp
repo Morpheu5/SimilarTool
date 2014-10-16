@@ -83,10 +83,10 @@ void SimilarToolApp::keyUp(KeyEvent event) {
 			if(_currentTriplet > 0 && _currentTriplet <= _triplets.size()) {
 				_widgetsMutex.lock();
 				stringstream ss;
-				ss << "End of round " << _currentTriplet << " -- params: " << _triplets[_currentTriplet-1].params << endl;
+				ss << "End of round " << _currentTriplet << " -- params: " << _triplets[_currentTriplet-1].params;
 				for(auto w : _widgets) {
 					if(auto player = dynamic_pointer_cast<PlayerWidget>(w.second)) {
-						ss << "type: " << player->type << " -- filename: " << player->filename << " -- position: " << player->position << endl;
+						ss << " -- type: " << player->type << " -- filename: " << player->filename << " -- position: " << player->position << endl;
 					}
 				}
 				Logger::instance().log(ss.str());
