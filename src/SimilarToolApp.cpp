@@ -86,7 +86,7 @@ void SimilarToolApp::keyUp(KeyEvent event) {
 				ss << "End of round " << _currentTriplet << " -- params: " << _triplets[_currentTriplet-1].params;
 				for(auto w : _widgets) {
 					if(auto player = dynamic_pointer_cast<PlayerWidget>(w.second)) {
-						ss << " -- type: " << player->type << " -- filename: " << player->filename << " -- position: " << player->position << endl;
+						ss << " -- type: " << player->type << " -- filename: " << player->filename << " -- position: " << player->position;
 					}
 				}
 				Logger::instance().log(ss.str());
