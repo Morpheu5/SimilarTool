@@ -34,7 +34,7 @@ void SimilarToolApp::setup() {
 	_tracesProcessor = thread(bind(&SimilarToolApp::processTraces, this));
 	
 #if DEBUG==1
-	auto basepath = ci::fs::path("/Users/morpheu5/src/SimilarTool");
+	auto basepath = getHomeDirectory()/"src/SimilarTool";
 #else
 	auto basepath = getAppPath().remove_filename();
 #endif
@@ -219,7 +219,7 @@ void SimilarToolApp::processTraces() {
 			// Check for tap
 			if(trace->state == Trace::State::TOUCH_UP) {
 				float d = trace->points.front().distance(trace->points.back());
-				if(d < 10 && trace->points.size() < 5) {
+				if(d < 10) {
 					// Tap!
 					if(trace->widgetId > 0) {
 						_widgetsMutex.lock();
