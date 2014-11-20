@@ -4,9 +4,12 @@
 #include "cinder/audio/NodeEffects.h"
 #include "cinder/audio/SamplePlayerNode.h"
 
+#include "cinder/Utilities.h"
+
 #include "Logger.h"
 
 using namespace ci;
+using namespace ci::app;
 using namespace std;
 
 PlayerWidget::PlayerWidget() : Widget() {
@@ -21,7 +24,7 @@ PlayerWidget::PlayerWidget(string f) : PlayerWidget() {
 	
 	auto context = audio::Context::master();
 #if DEBUG==1
-	auto filepath = ci::fs::path("/Users/af6539/src/SimilarTool");
+    auto filepath = getHomeDirectory()/"src/SimilarTool";
 #else
 	auto filepath = ci::app::getAppPath().remove_filename();
 #endif
